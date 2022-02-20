@@ -15,6 +15,19 @@ public class SceneController : MonoBehaviour
         
     }
 
+    //for menu interface use
+
+    public void StartGame()
+    {
+      SceneManager.LoadScene("Level_1");
+    }
+
+    public void QuitGame()
+    {
+      SceneManager.LoadScene("MainMenu");
+    }
+
+    //for in game coding
      private void OnTriggerEnter(Collider other) {
 
        if(other.gameObject.CompareTag("Player"))
@@ -34,4 +47,5 @@ public class SceneController : MonoBehaviour
        }
        
    }
+
 }
