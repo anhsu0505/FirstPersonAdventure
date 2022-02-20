@@ -9,7 +9,8 @@ string sceneName;
    
     void Start()
     {
-     
+        GlobalVariables.hasKey = false;
+        
         Scene currentScene = SceneManager.GetActiveScene();
         
         sceneName = currentScene.name;
