@@ -24,6 +24,7 @@ public class SceneController : MonoBehaviour
 
     public void QuitGame()
     {
+      Cursor.lockState = CursorLockMode.None;
       SceneManager.LoadScene("MainMenu");
     }
 
