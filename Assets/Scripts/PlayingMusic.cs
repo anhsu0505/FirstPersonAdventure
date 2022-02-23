@@ -9,9 +9,11 @@ public class PlayingMusic : MonoBehaviour
         if(FindObjectsOfType<PlayingMusic>().Length > 1)
         {
             Destroy(gameObject);
-        } else {
-            DontDestroyOnLoad(gameObject);
-        }
+        } 
+        //else 
+        //{
+        //    DontDestroyOnLoad(gameObject);
+        //}
     }
 
 }
