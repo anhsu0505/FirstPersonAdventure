@@ -17,7 +17,7 @@ public class keypad : MonoBehaviour
 {
     // *** CAN DELETE THESE ** \\
     // Used to hide joystick and slider
-    [Header("Objects to Hide/Show")]
+    [Header("Show/Hide Objects")]
     public GameObject objectToDisable;
     public GameObject objectToDisable2;
 
@@ -54,12 +54,23 @@ public class keypad : MonoBehaviour
     {
         if (btnClicked == numOfGuesses)
         {
+             Debug.Log(curPassword.Length);
             if (input == curPassword)
             {
                 // LOG message that password is correct
                 Debug.Log("Correct Password!");
-                //input = ""; 
-                //btnClicked = 0;
+
+                objectToDisable.SetActive(true);
+                objectToDisable2.SetActive(true);
+                objectToEnable.SetActive(false); 
+                input = "▲●●■■■";
+                btnClicked = 6;
+                keypadScreen = false;
+                Cursor.lockState = CursorLockMode.Locked;
+
+                //play sound effect CorrectPassword
+
+                //Trigger Open Safe Animation
             }
             else
             {
