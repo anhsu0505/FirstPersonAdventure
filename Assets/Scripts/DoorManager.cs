@@ -28,6 +28,6 @@ public class DoorManager : MonoBehaviour
 
    public void waitOneSecond()
    {
-       Debug.log("esperou");
+       //Debug.log("esperou");
    }
 }
