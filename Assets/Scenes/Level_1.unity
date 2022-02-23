@@ -875,7 +875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 120daf5e8cb8aa64c9595ec6e21b7f50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reticle: {fileID: 0}
+  reticle: {fileID: 1562785803}
   holdPoint: {fileID: 1341243604}
   camTrans: {fileID: 963194228}
   grabbableLayers:
@@ -4390,7 +4390,7 @@ GameObject:
   - component: {fileID: 698704357}
   - component: {fileID: 698704356}
   - component: {fileID: 698704355}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Book (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6879,6 +6879,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: "\u2601"
       objectReference: {fileID: 0}
+    - target: {fileID: 1976017265313531495, guid: 27d368d5315be2849847be99cf6fe2b7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2074755940084438659, guid: 27d368d5315be2849847be99cf6fe2b7, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -6966,6 +6970,10 @@ PrefabInstance:
     - target: {fileID: 4049804745980382096, guid: 27d368d5315be2849847be99cf6fe2b7, type: 3}
       propertyPath: m_Size.z
       value: 1.1977694
+      objectReference: {fileID: 0}
+    - target: {fileID: 4049804745980382096, guid: 27d368d5315be2849847be99cf6fe2b7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4049804745980382096, guid: 27d368d5315be2849847be99cf6fe2b7, type: 3}
       propertyPath: m_Center.x
@@ -7235,7 +7243,7 @@ GameObject:
   - component: {fileID: 1110126077}
   - component: {fileID: 1110126076}
   - component: {fileID: 1110126075}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Book (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8069,17 +8077,12 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &1332218238 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
-  m_PrefabInstance: {fileID: 712197144}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1332218239 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
   m_PrefabInstance: {fileID: 712197144}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1332218238}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
@@ -8109,7 +8112,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1341243603}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.754, z: -0.265}
+  m_LocalPosition: {x: 0.434, y: -0.335, z: 0.945}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9014,7 +9017,7 @@ GameObject:
   - component: {fileID: 1447836181}
   - component: {fileID: 1447836180}
   - component: {fileID: 1447836179}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Book (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9173,7 +9176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 010a6e5305fa7004f89c5d317b7b47d4, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -9884,7 +9887,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1562785802
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10207,7 +10210,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1580507494
 Rigidbody:
@@ -10242,7 +10245,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1653033436
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10260,7 +10263,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 24.282545, y: -16.600405}
+  m_AnchoredPosition: {x: 24.282593, y: -16.600464}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1653033437
@@ -10386,6 +10389,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f4e5dd2165039f4a878d1c1260761df, type: 3}
+--- !u!1 &1661837774 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000013323770450, guid: 9f4e5dd2165039f4a878d1c1260761df, type: 3}
+  m_PrefabInstance: {fileID: 1661837773}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1661837775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661837774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55bd2e42bcf5aba4493d445009a69800, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadLevel: Level_2
 --- !u!1 &1664579595
 GameObject:
   m_ObjectHideFlags: 0
@@ -11951,10 +11972,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0951c09f691436e47ae85774d1011664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  safe: {fileID: 1678861200}
+  safebox: {fileID: 1678861200}
   safeOpened: SafeOpen
-  objectToDisable: {fileID: 2002481025}
-  objectToDisable2: {fileID: 1332218238}
   objectToEnable: {fileID: 1461609269}
   curPassword: "\u25B2\u25CF\u25CF\u25A0\u25A0\u25A0"
   input: 

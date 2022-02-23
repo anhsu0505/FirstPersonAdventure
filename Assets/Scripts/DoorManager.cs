@@ -9,6 +9,8 @@ public class DoorManager : MonoBehaviour
    private void OnCollisionEnter(Collision other) {
        if(other.gameObject.CompareTag("Player") && GlobalVariables.hasKey == true){
            SceneManager.LoadScene(loadLevel);
+       } else {
+           //playsoundeffect door closed
        }
    }
 }
