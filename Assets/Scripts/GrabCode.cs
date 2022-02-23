@@ -21,12 +21,14 @@ public class GrabCode : MonoBehaviour
     private Transform heldObject = null;
     private Rigidbody heldRigidbody = null; //the held object is rigidbody
 
+    public Animator animator;
+
 
     private void Start()
     {
         ignorePlayerLayer = LayerMask.NameToLayer("ignorePlayer"); //grab the ignoreplayer layer
     }
-    void Update()
+    public void Update()
     {
         //transform.Rotate(new Vector3(15,30,45) * Time.deltaTime);
 
@@ -39,6 +41,17 @@ public class GrabCode : MonoBehaviour
             else
             {
                 LaunchObject();
+            }
+
+            //triggering drawer open animation
+            if(gameObject.GetComponent("Drawer") && heldObject == null)
+            {
+                RaycastHit hit;
+                if (Physics.Raycast(camTrans.position, camTrans.forward, out hit, raycastDist, grabbableLayers))
+                {
+
+                    animator.SetTrigger("DoorOpen");
+                }
             }
         }
     }

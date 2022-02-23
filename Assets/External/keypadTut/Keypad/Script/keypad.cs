@@ -16,7 +16,7 @@ using UnityEngine.SceneManagement;
 public class keypad : MonoBehaviour
 {
 
-    [SerializeField] public Animator safebox;
+    [SerializeField] public Animator safeboxAnimator;
     [SerializeField] public string safeOpened = "SafeOpen";
 
 
@@ -46,16 +46,25 @@ public class keypad : MonoBehaviour
     private float btnClicked = 0;
     private float numOfGuesses;
 
+    //Colliders of the safebox door
+    public Collider safeBoxDoorCollider;
+    public Collider keyBoard;
+    public Collider keyBoardBase;
+
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         //Cursor.lockState = CursorLockMode.None;
         btnClicked = 0; // No of times the button was clicked
         numOfGuesses = curPassword.Length; // Set the password length.
+
+        safeBoxDoorCollider.GetComponent<BoxCollider>().enabled = true;
+        keyBoard.GetComponent<BoxCollider>().enabled = true;
+        keyBoardBase.GetComponent<BoxCollider>().enabled = true;
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         if (btnClicked == numOfGuesses)
         {
@@ -63,7 +72,11 @@ public class keypad : MonoBehaviour
             if (input == curPassword)
             {
                 //play sound effect CorrectPassword
-                safebox.Play(safeOpened, 0, 0.0f);
+                //safeboxAnimator.Play(safeOpened, 0, 0.0f);
+                safeBoxDoorCollider.GetComponent<BoxCollider>().enabled = false;
+                keyBoard.GetComponent<BoxCollider>().enabled = false;
+                keyBoardBase.GetComponent<BoxCollider>().enabled = false;
+                safeboxAnimator.SetTrigger(safeOpened);
 
                 //objectToDisable.SetActive(true);
                // objectToDisable2.SetActive(true);
