@@ -1090,7 +1090,7 @@ GameObject:
   - component: {fileID: 328826918}
   - component: {fileID: 328826921}
   - component: {fileID: 328826922}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Vase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1550,7 +1550,7 @@ GameObject:
   - component: {fileID: 386983550}
   - component: {fileID: 386983553}
   - component: {fileID: 386983554}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trophy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2095,6 +2095,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Key
       objectReference: {fileID: 0}
+    - target: {fileID: 7847294845501381213, guid: 19b87ae55eb4b9d47a5d62bed37a55e5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19b87ae55eb4b9d47a5d62bed37a55e5, type: 3}
 --- !u!4 &444647102 stripped
@@ -2309,7 +2313,7 @@ GameObject:
   - component: {fileID: 469518011}
   - component: {fileID: 469518010}
   - component: {fileID: 469518009}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Large Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2521,7 +2525,7 @@ GameObject:
   - component: {fileID: 529275400}
   - component: {fileID: 529275399}
   - component: {fileID: 529275398}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Painting_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3494,6 +3498,10 @@ PrefabInstance:
     - target: {fileID: 1265682900871876772, guid: d5e95127f6a59824684c10f9d0d4ad11, type: 3}
       propertyPath: m_Name
       value: Circle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265682900871876772, guid: d5e95127f6a59824684c10f9d0d4ad11, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6989748904014684275, guid: d5e95127f6a59824684c10f9d0d4ad11, type: 3}
       propertyPath: m_RootOrder
@@ -5010,6 +5018,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Circle (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1265682900871876772, guid: d5e95127f6a59824684c10f9d0d4ad11, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6989748904014684275, guid: d5e95127f6a59824684c10f9d0d4ad11, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -5183,7 +5195,7 @@ GameObject:
   - component: {fileID: 754584049}
   - component: {fileID: 754584053}
   - component: {fileID: 754584052}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Book
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6001,7 +6013,7 @@ GameObject:
   - component: {fileID: 879551917}
   - component: {fileID: 879551916}
   - component: {fileID: 879551915}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Painting_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6098,7 +6110,7 @@ GameObject:
   - component: {fileID: 915526137}
   - component: {fileID: 915526136}
   - component: {fileID: 915526135}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6475,7 +6487,7 @@ GameObject:
   - component: {fileID: 988653212}
   - component: {fileID: 988653214}
   - component: {fileID: 988653213}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7623,7 +7635,7 @@ GameObject:
   - component: {fileID: 1224406392}
   - component: {fileID: 1224406391}
   - component: {fileID: 1224406390}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8806,7 +8818,7 @@ GameObject:
   - component: {fileID: 1441017861}
   - component: {fileID: 1441017860}
   - component: {fileID: 1441017859}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: painting_large
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9507,7 +9519,7 @@ GameObject:
   - component: {fileID: 1520601149}
   - component: {fileID: 1520601153}
   - component: {fileID: 1520601152}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Main Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10385,7 +10397,7 @@ GameObject:
   - component: {fileID: 1664579596}
   - component: {fileID: 1664579598}
   - component: {fileID: 1664579597}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10521,7 +10533,7 @@ GameObject:
   - component: {fileID: 1692345335}
   - component: {fileID: 1692345337}
   - component: {fileID: 1692345336}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11989,7 +12001,7 @@ GameObject:
   - component: {fileID: 1941524437}
   - component: {fileID: 1941524441}
   - component: {fileID: 1941524442}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Vase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12108,7 +12120,7 @@ GameObject:
   - component: {fileID: 1944873376}
   - component: {fileID: 1944873380}
   - component: {fileID: 1944873379}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Medium Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
