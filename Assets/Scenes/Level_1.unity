@@ -862,7 +862,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   feetTransform: {fileID: 1718317770}
-  grounded: 1
+  grounded: 0
 --- !u!114 &251683113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2024,6 +2024,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1756131629}
     m_Modifications:
+    - target: {fileID: 829761334, guid: 19b87ae55eb4b9d47a5d62bed37a55e5, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 829761335, guid: 19b87ae55eb4b9d47a5d62bed37a55e5, type: 3}
       propertyPath: keyUI
       value: 
@@ -2078,7 +2082,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7716786365603188316, guid: 19b87ae55eb4b9d47a5d62bed37a55e5, type: 3}
       propertyPath: m_Constraints
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7716786365603188316, guid: 19b87ae55eb4b9d47a5d62bed37a55e5, type: 3}
       propertyPath: m_IsKinematic
@@ -9909,7 +9913,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7ec080d4c6a060148a7218e359cc5d0f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 712b482e168027f499857258df4e8c5c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11441,8 +11445,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1845000958}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.0290015}
-  m_LocalScale: {x: 0.09956477, y: 1.9279982, z: 2.0580034}
+  m_LocalPosition: {x: 0, y: 0.01, z: -0.994}
+  m_LocalScale: {x: 0.09956477, y: 1.987959, z: 2.161727}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1414047887}

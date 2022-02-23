@@ -98,6 +98,7 @@ public class GrabCode : MonoBehaviour
         SnapToHand();
 
         heldRigidbody.isKinematic = false;
+        //heldRigidbody.useGravity = true;
         heldObject.position = camTrans.position;
         heldRigidbody.AddForce(camTrans.forward * launchForce, ForceMode.VelocityChange); //throw the obejct in the direction the cam
 
