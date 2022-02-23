@@ -6,7 +6,8 @@ public class SafeOpenAT : MonoBehaviour
 {
     [SerializeField] public Animator platform;
     [SerializeField] public string platformMove = "SafeOpen";
-    // Start is called before the first frame update
+
+
     public void OnTriggerEnter(Collider other) 
     {
         if (other.CompareTag ("Player"))
