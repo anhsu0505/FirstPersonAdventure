@@ -5,8 +5,14 @@ using UnityEngine;
 public class ItemController : MonoBehaviour
 {    
     public GameObject keyUI;
-    //public AudioClip gotKeySound;    
+    AudioSource _audiosource;
+    public AudioClip gotKeySound;
     
+    void Start()
+    {
+        _audiosource = GetComponent<AudioSource>();
+    }
+
     void Update()
     {
         transform.Rotate(new Vector3(15,30,45) * Time.deltaTime);
@@ -15,8 +21,7 @@ public class ItemController : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.CompareTag("Player"))
         {
-            //play sfx For GotKey
-            //_audiosource.PlayOneShot(gotKeySound);
+            _audiosource.PlayOneShot(gotKeySound);
             keyUI.SetActive(true);
             GlobalVariables.hasKey = true;
             Destroy(gameObject);
