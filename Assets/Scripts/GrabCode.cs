@@ -8,11 +8,11 @@ public class GrabCode : MonoBehaviour
     private float launchForce = 20;
     private float raycastDist = 50; //range between item and player to be grabbed
 
-    //public Image reticle;
+    public Image reticle;
     public Transform holdPoint; //player's hand location
     public Transform camTrans; 
 
-    //private bool reticleTarget = false;
+    private bool reticleTarget = false;
 
     public LayerMask grabbableLayers; //define the layer can eb grabbed
     private int ignorePlayerLayer; //makesure layer not collide with player
@@ -100,24 +100,24 @@ public class GrabCode : MonoBehaviour
     }
 
 
-    //private void FixedUpdate()
-    //{
-    //    RaycastHit hit;
-    //    if (Physics.Raycast(camTrans.position, camTrans.forward, out hit, raycastDist, grabbableLayers))
-    //    {
-    //        if (!reticleTarget)
-    //        {
-    //            reticle.color = Color.red;
-    //            reticleTarget = true;
-    //        }
+    private void FixedUpdate()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(camTrans.position, camTrans.forward, out hit, raycastDist, grabbableLayers))
+        {
+            if (!reticleTarget)
+            {
+                reticle.color = Color.red;
+                reticleTarget = true;
+            }
 
-    //    }
-    //    else if (reticleTarget)
-    //    {
-    //        reticle.color = Color.white;
-    //        reticleTarget = false;
-    //    }
-    //}
+        }
+        else if (reticleTarget)
+        {
+            reticle.color = Color.white;
+            reticleTarget = false;
+        }
+    }
 
 
 
