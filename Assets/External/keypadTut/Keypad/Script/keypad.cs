@@ -15,11 +15,16 @@ using UnityEngine.SceneManagement;
 
 public class keypad : MonoBehaviour
 {
+
+    [SerializeField] public Animator safebox;
+    [SerializeField] public string safeOpened = "SafeOpen";
+
+
     // *** CAN DELETE THESE ** \\
     // Used to hide joystick and slider
     [Header("Show/Hide Objects")]
-    public GameObject objectToDisable;
-    public GameObject objectToDisable2;
+    //public GameObject objectToDisable;
+   // public GameObject objectToDisable2;
 
     // Object to be enabled is the keypad. This is needed
     public GameObject objectToEnable;
@@ -57,20 +62,18 @@ public class keypad : MonoBehaviour
              Debug.Log(curPassword.Length);
             if (input == curPassword)
             {
-                // LOG message that password is correct
-                Debug.Log("Correct Password!");
+                //play sound effect CorrectPassword
+                safebox.Play(safeOpened, 0, 0.0f);
 
-                objectToDisable.SetActive(true);
-                objectToDisable2.SetActive(true);
+                //objectToDisable.SetActive(true);
+               // objectToDisable2.SetActive(true);
                 objectToEnable.SetActive(false); 
+                keypadScreen = false;
+
                 input = "▲●●■■■";
                 btnClicked = 6;
-                keypadScreen = false;
+                
                 Cursor.lockState = CursorLockMode.Locked;
-
-                //play sound effect CorrectPassword
-
-                //Trigger Open Safe Animation
             }
             else
             {
@@ -115,8 +118,8 @@ public class keypad : MonoBehaviour
         if (keypadScreen)
         {
             Cursor.lockState = CursorLockMode.None;
-            objectToDisable.SetActive(false);
-            objectToDisable2.SetActive(false);
+           //objectToDisable.SetActive(false);
+            //objectToDisable2.SetActive(false);
             objectToEnable.SetActive(true);
         }
 
@@ -127,8 +130,8 @@ public class keypad : MonoBehaviour
         switch (valueEntered)
         {
             case "Q": // QUIT
-                objectToDisable.SetActive(true);
-                objectToDisable2.SetActive(true);
+                //objectToDisable.SetActive(true);
+                //objectToDisable2.SetActive(true);
                 objectToEnable.SetActive(false);
                 btnClicked = 0;
                 keypadScreen = false;
