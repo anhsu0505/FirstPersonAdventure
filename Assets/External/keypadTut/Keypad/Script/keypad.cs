@@ -31,7 +31,7 @@ public class keypad : MonoBehaviour
     // audioData : Play this sound when user enters in password incorrectly too many times
 
     [Header("Keypad Settings")]
-    public string curPassword = "▲▲▲●●■■■";
+    public string curPassword = "▲●●■■■";
     public string input;
     public Text displayText;
     public AudioSource audioData;
@@ -44,7 +44,7 @@ public class keypad : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.None;
+        //Cursor.lockState = CursorLockMode.None;
         btnClicked = 0; // No of times the button was clicked
         numOfGuesses = curPassword.Length; // Set the password length.
     }
@@ -56,14 +56,10 @@ public class keypad : MonoBehaviour
         {
             if (input == curPassword)
             {
-                //Load the next scene
-                //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    
                 // LOG message that password is correct
                 Debug.Log("Correct Password!");
                 //input = ""; 
                 //btnClicked = 0;
-
             }
             else
             {
