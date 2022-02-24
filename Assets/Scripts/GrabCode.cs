@@ -44,15 +44,15 @@ public class GrabCode : MonoBehaviour
             }
 
             //triggering drawer open animation
-            if(gameObject.GetComponent("Drawer") && heldObject == null)
-            {
-                RaycastHit hit;
-                if (Physics.Raycast(camTrans.position, camTrans.forward, out hit, raycastDist, grabbableLayers))
-                {
+            //if(gameObject.GetComponent("Drawer") && heldObject == null)
+           // {
+            //    RaycastHit hit;
+            //    if (Physics.Raycast(camTrans.position, camTrans.forward, out hit, raycastDist, grabbableLayers))
+            //    {
 
-                    animator.SetTrigger("DoorOpen");
-                }
-            }
+             ///       animator.SetTrigger("DoorOpen");
+             //   }
+          //  }
         }
     }
 
