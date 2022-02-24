@@ -37,7 +37,8 @@ public class SceneController : MonoBehaviour
              SceneManager.LoadScene("Level_1");
            }
 
-           if( sceneName == "Level_1"){
+           if(sceneName == "Level_1" && GlobalVariables.hasKey == true)
+            {
              SceneManager.LoadScene("Level_2");
            }
 

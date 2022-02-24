@@ -20,8 +20,11 @@ public class PlayerController : MonoBehaviour
     float groundCheckDist = .5f; //How far down to check for the ground. The radius of Physics.CheckSphere
     public bool grounded = false; //Is the player on the ground
 
+    public Animator animator;
+
     void Start()
     {
+        //animator = GetComponent<Animator>();
         _rigidbody = GetComponent<Rigidbody>(); // Using GetComponent is expensive. Always do it in start and chache it when you can.
         Cursor.lockState = CursorLockMode.Locked; // Hides the mouse and locks it to the center of the screen.
     }
@@ -50,6 +53,14 @@ public class PlayerController : MonoBehaviour
         if (grounded && Input.GetButtonDown("Jump")) //if the player is on the ground and press Spacebar
         {
             _rigidbody.AddForce(new Vector3(0, jumpForce, 0)); // Add a force jumpForce in the Y direction
+        }
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Drawer")) {
+            animator.SetTrigger("DoorOpen");
+
         }
     }
 }
