@@ -5,12 +5,12 @@ using UnityEngine;
 public class ItemController : MonoBehaviour
 {    
     public GameObject keyUI;
-    AudioSource _audiosource;
-    public AudioClip gotKeySound;
+    //AudioSource _audiosource;
+    //public AudioClip gotKeySound;
     
     void Start()
     {
-        _audiosource = GetComponent<AudioSource>();
+        //_audiosource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -21,7 +21,7 @@ public class ItemController : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.CompareTag("Player"))
         {
-            _audiosource.PlayOneShot(gotKeySound);
+            //_audiosource.PlayOneShot(gotKeySound);
             keyUI.SetActive(true);
             GlobalVariables.hasKey = true;
             Destroy(gameObject);
