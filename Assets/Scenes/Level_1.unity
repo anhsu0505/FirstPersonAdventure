@@ -955,6 +955,8 @@ MonoBehaviour:
   reticle: {fileID: 1562785803}
   holdPoint: {fileID: 1341243604}
   camTrans: {fileID: 963194228}
+  pickObject: {fileID: 544543482}
+  clip: {fileID: 8300000, guid: 214c9239dd2b54f8c99e504fac47bfc1, type: 3}
   grabbableLayers:
     serializedVersion: 2
     m_Bits: 64
@@ -3860,6 +3862,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0da4625888a47244fa2e252339d89bb2, type: 3}
+--- !u!82 &544543482 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7687965365491929682, guid: 0da4625888a47244fa2e252339d89bb2, type: 3}
+  m_PrefabInstance: {fileID: 544543481}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &628842294
 GameObject:
   m_ObjectHideFlags: 0

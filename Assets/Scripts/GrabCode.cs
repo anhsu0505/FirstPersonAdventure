@@ -10,7 +10,9 @@ public class GrabCode : MonoBehaviour
 
     public Image reticle;
     public Transform holdPoint; //player's hand location
-    public Transform camTrans; 
+    public Transform camTrans;
+    public AudioSource pickObject;
+    public AudioClip clip;
 
     private bool reticleTarget = false;
 
@@ -26,7 +28,8 @@ public class GrabCode : MonoBehaviour
 
     private void Start()
     {
-        ignorePlayerLayer = LayerMask.NameToLayer("ignorePlayer"); //grab the ignoreplayer layer
+        ignorePlayerLayer = LayerMask.NameToLayer("ignorePlayer"); //grab the ignoreplayer layer\
+        pickObject = GetComponent<AudioSource>();
     }
     public void Update()
     {
@@ -41,6 +44,7 @@ public class GrabCode : MonoBehaviour
             else
             {
                 LaunchObject();
+                
             }
 
             //triggering drawer open animation
@@ -62,7 +66,8 @@ public class GrabCode : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(camTrans.position, camTrans.forward, out hit, raycastDist, grabbableLayers))
         {
-            StartCoroutine(PickUpObject(hit.transform)); //pass the transform of the object/collider that was picked 
+            StartCoroutine(PickUpObject(hit.transform)); //pass the transform of the object/collider that was picked
+            
         }
     }
 
@@ -71,6 +76,9 @@ public class GrabCode : MonoBehaviour
         heldObject = _transform;
         originalLayer = heldObject.gameObject.layer; //save the original layer
         heldObject.gameObject.layer = ignorePlayerLayer;
+
+       
+
 
         heldRigidbody = heldObject.GetComponent<Rigidbody>();
         heldRigidbody.isKinematic = true; //ignore gravity after picked up
@@ -90,6 +98,8 @@ public class GrabCode : MonoBehaviour
     {
         heldObject.position = holdPoint.position;
         heldObject.parent = holdPoint;
+
+        
     }
 
     void LaunchObject()
