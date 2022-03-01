@@ -100,7 +100,6 @@ public class keypad : MonoBehaviour
                 input = "";
                 displayText.text = input.ToString();
                 audioData.Play();
-                //take 1 minute from timer
                 _timing.PenalizeTime();
                 btnClicked = 0;
             }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GrabMeSafe : MonoBehaviour
 {
+     public GameObject triggeringWall;
      public GameObject safeObj;
      public bool isSafeActive = false;
     private void OnTriggerEnter(Collider other) {
@@ -13,6 +14,7 @@ public class GrabMeSafe : MonoBehaviour
        {
           safeObj.SetActive(true);
           isSafeActive = true;
+          Destroy(triggeringWall);
        }
     } 
    }
