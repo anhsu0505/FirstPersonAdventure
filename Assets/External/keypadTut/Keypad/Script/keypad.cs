@@ -16,6 +16,7 @@ using UnityEngine.SceneManagement;
 public class keypad : MonoBehaviour
 {
     Timing _timing;
+    public GameObject keyObj;
 
     [SerializeField] public Animator safeboxAnimator;
     [SerializeField] public string safeOpened = "SafeOpen";
@@ -88,6 +89,8 @@ public class keypad : MonoBehaviour
 
                 input = "▲●●■■■";
                 btnClicked = 6;
+
+                keyObj.SetActive(true);
                 
                 Cursor.lockState = CursorLockMode.Locked;
             }
