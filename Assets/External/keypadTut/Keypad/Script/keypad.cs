@@ -15,6 +15,7 @@ using UnityEngine.SceneManagement;
 
 public class keypad : MonoBehaviour
 {
+    Timing _timing;
 
     [SerializeField] public Animator safeboxAnimator;
     [SerializeField] public string safeOpened = "SafeOpen";
@@ -61,6 +62,8 @@ public class keypad : MonoBehaviour
         safeBoxDoorCollider.GetComponent<BoxCollider>().enabled = true;
         keyBoard.GetComponent<BoxCollider>().enabled = true;
         keyBoardBase.GetComponent<BoxCollider>().enabled = true;
+
+        _timing = FindObjectOfType<Timing>();
     }
 
     // Update is called once per frame
@@ -94,6 +97,8 @@ public class keypad : MonoBehaviour
                 input = "";
                 displayText.text = input.ToString();
                 audioData.Play();
+                //take 1 minute from timer
+                _timing.PenalizeTime();
                 btnClicked = 0;
             }
 
