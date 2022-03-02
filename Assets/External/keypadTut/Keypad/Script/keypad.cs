@@ -16,7 +16,8 @@ using UnityEngine.SceneManagement;
 public class keypad : MonoBehaviour
 {
     Timing _timing;
-    public GameObject keyObj;
+    //private GameObject keyObj;
+    public bool keypadOpen;
 
     [SerializeField] public Animator safeboxAnimator;
     [SerializeField] public string safeOpened = "SafeOpen";
@@ -64,6 +65,8 @@ public class keypad : MonoBehaviour
         keyBoard.GetComponent<BoxCollider>().enabled = true;
         keyBoardBase.GetComponent<BoxCollider>().enabled = true;
 
+        //keyObj = GameObject.FindGameObjectWithTag("Key");
+
         _timing = FindObjectOfType<Timing>();
     }
 
@@ -72,11 +75,12 @@ public class keypad : MonoBehaviour
     {
         if (btnClicked == numOfGuesses)
         {
-             Debug.Log(curPassword.Length);
+             //Debug.Log(curPassword.Length);
             if (input == curPassword)
             {
                 //play sound effect CorrectPassword
                 //safeboxAnimator.Play(safeOpened, 0, 0.0f);
+                GlobalVariables.safeboxIsOpen = true;
                 safeBoxDoorCollider.GetComponent<BoxCollider>().enabled = false;
                 keyBoard.GetComponent<BoxCollider>().enabled = false;
                 keyBoardBase.GetComponent<BoxCollider>().enabled = false;
@@ -86,13 +90,15 @@ public class keypad : MonoBehaviour
                // objectToDisable2.SetActive(true);
                 objectToEnable.SetActive(false); 
                 keypadScreen = false;
-
+                
                 input = "▲●●■■■";
                 btnClicked = 6;
 
-                keyObj.SetActive(true);
-                
+                //keyObj.gameObject.SetActive(true);
+
+
                 Cursor.lockState = CursorLockMode.Locked;
+                
             }
             else
             {

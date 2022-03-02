@@ -1996,11 +1996,6 @@ MonoBehaviour:
   gameOverUI: {fileID: 1529989049}
   hangGrabberUI: {fileID: 1562785801}
   timerInitial: 305
---- !u!1 &399201828 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7847294845501381213, guid: 19b87ae55eb4b9d47a5d62bed37a55e5, type: 3}
-  m_PrefabInstance: {fileID: 444647101}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &404632423
 GameObject:
   m_ObjectHideFlags: 0
@@ -2492,6 +2487,10 @@ PrefabInstance:
       propertyPath: keyUI
       value: 
       objectReference: {fileID: 1653033435}
+    - target: {fileID: 829761335, guid: 19b87ae55eb4b9d47a5d62bed37a55e5, type: 3}
+      propertyPath: _keypad
+      value: 
+      objectReference: {fileID: 1900241349}
     - target: {fileID: 1647940046935145951, guid: 19b87ae55eb4b9d47a5d62bed37a55e5, type: 3}
       propertyPath: m_Size.y
       value: 0.028951906
@@ -2578,7 +2577,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7847294845501381213, guid: 19b87ae55eb4b9d47a5d62bed37a55e5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19b87ae55eb4b9d47a5d62bed37a55e5, type: 3}
@@ -14025,7 +14024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0951c09f691436e47ae85774d1011664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyObj: {fileID: 399201828}
+  keypadOpen: 0
   safeboxAnimator: {fileID: 1678861200}
   safeOpened: SafeOpen
   objectToEnable: {fileID: 1461609269}
