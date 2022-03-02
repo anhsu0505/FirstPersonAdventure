@@ -14,13 +14,17 @@ public class DoorManager : MonoBehaviour
         _audiosource = GetComponent<AudioSource>();
     }
     public string loadLevel;
-   private void OnCollisionEnter(Collision other) {
+
+
+    private void OnCollisionEnter(Collision other) {
        if(other.gameObject.CompareTag("Player") && GlobalVariables.hasKey == true){
            _audiosource.PlayOneShot(doorUnlocked);
            
            Invoke("waitOneSecond", 2);
 
            SceneManager.LoadScene(loadLevel);
+
+
        } else {
            _audiosource.PlayOneShot(doorLocked);
        }
