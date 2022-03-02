@@ -17,7 +17,7 @@ public class keypad : MonoBehaviour
 {
     Timing _timing;
     //private GameObject keyObj;
-    public bool keypadOpen;
+    //public bool keypadOpen;
 
     [SerializeField] public Animator safeboxAnimator;
     [SerializeField] public string safeOpened = "SafeOpen";

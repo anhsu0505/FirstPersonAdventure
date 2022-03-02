@@ -9,6 +9,8 @@ TagManager:
   - Item
   - Drawer
   - Frame
+  - AudioSource1
+  - AudioSource2
   layers:
   - Default
   - TransparentFX
