@@ -12,7 +12,8 @@ public class DoorManager : MonoBehaviour
     public AudioSource audioSrc1;
     public AudioSource audioSrc2;
 
-    
+    //public Animator fadeOut;
+
 
     void Start()
     {
@@ -32,7 +33,9 @@ public class DoorManager : MonoBehaviour
             GameObject as1 = GameObject.FindGameObjectWithTag("doorUnLockedSound");
             audioSrc1 = as1.GetComponent<AudioSource>();
             audioSrc1.PlayOneShot(doorUnlocked);
-            
+
+
+            //StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
 
             Invoke("waitOneSecond", 2);
 
@@ -46,9 +49,12 @@ public class DoorManager : MonoBehaviour
             audioSrc2.PlayOneShot(doorLocked);
         }
    }
-
-   public void waitOneSecond()
-   {
-       //Debug.log("esperou");
-   }
+/*
+   IEnumerator LoadLevel(int levelIndex)
+    {
+        fadeOut.SetTrigger("FadeOut");
+        yield return new WaitForSeconds(1.1f);
+        SceneManager.LoadScene(levelIndex);   
+    }
+*/
 }
