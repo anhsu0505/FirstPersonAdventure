@@ -11,6 +11,9 @@ TagManager:
   - Frame
   - AudioSource1
   - AudioSource2
+  - doorLockedSound
+  - doorUnLockedSound
+  - pickupObjectSound
   layers:
   - Default
   - TransparentFX

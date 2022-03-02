@@ -11,8 +11,12 @@ public class GrabCode : MonoBehaviour
     public Image reticle;
     public Transform holdPoint; //player's hand location
     public Transform camTrans;
+
+
     AudioSource _audioSource;
     public AudioClip pickSound;
+    public AudioSource audioSrc1;
+
 
     private bool reticleTarget = false;
 
@@ -37,12 +41,18 @@ public class GrabCode : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0)) //mouse if clicked
         {
+            
+
             //_audioSource.PlayOneShot(pickSound);
 
             if (heldObject == null)
             {
                 CheckForPickup(); //function below
-                
+
+                GameObject as1 = GameObject.FindGameObjectWithTag("pickupObjectSound");
+                audioSrc1 = as1.GetComponent<AudioSource>();
+                audioSrc1.PlayOneShot(pickSound);
+                //pickSound.time = 0.2f;
             }
             else
             {
