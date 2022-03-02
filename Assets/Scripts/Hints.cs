@@ -32,7 +32,8 @@ public class Hints : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Debug.Log("Player Entered"); hints.SetActive(true);
+            Debug.Log("Player Entered");
+            hints.SetActive(true);
             audioSrc1.PlayOneShot(panelOpen);
         }
     }
@@ -42,16 +43,7 @@ public class Hints : MonoBehaviour
         {
             Debug.Log("Player Exited");
             hints.SetActive(false);
-            audioSrc2
-                
-                
-                
-                
-                
-                
-                
-                
-                .PlayOneShot(panelClose);
+            audioSrc2.PlayOneShot(panelClose);
         }
     }
 }
