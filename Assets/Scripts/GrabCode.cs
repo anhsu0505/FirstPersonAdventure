@@ -11,8 +11,8 @@ public class GrabCode : MonoBehaviour
     public Image reticle;
     public Transform holdPoint; //player's hand location
     public Transform camTrans;
-    public AudioSource pickObject;
-    public AudioClip clip;
+    AudioSource _audioSource;
+    public AudioClip pickSound;
 
     private bool reticleTarget = false;
 
@@ -29,7 +29,7 @@ public class GrabCode : MonoBehaviour
     private void Start()
     {
         ignorePlayerLayer = LayerMask.NameToLayer("ignorePlayer"); //grab the ignoreplayer layer\
-        pickObject = GetComponent<AudioSource>();
+        _audioSource= GetComponent<AudioSource>();
     }
     public void Update()
     {
@@ -37,9 +37,12 @@ public class GrabCode : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0)) //mouse if clicked
         {
+            //_audioSource.PlayOneShot(pickSound);
+
             if (heldObject == null)
             {
                 CheckForPickup(); //function below
+                
             }
             else
             {
@@ -77,7 +80,6 @@ public class GrabCode : MonoBehaviour
         originalLayer = heldObject.gameObject.layer; //save the original layer
         heldObject.gameObject.layer = ignorePlayerLayer;
 
-       
 
 
         heldRigidbody = heldObject.GetComponent<Rigidbody>();
@@ -133,6 +135,7 @@ public class GrabCode : MonoBehaviour
             {
                 reticle.color = Color.red;
                 reticleTarget = true;
+                
             }
 
         }
