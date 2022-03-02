@@ -6,9 +6,10 @@ using UnityEngine.UI;
 public class GrabCode : MonoBehaviour
 {
     private float launchForce = 20;
-    private float raycastDist = 50; //range between item and player to be grabbed
+    public float raycastDist = 50; //range between item and player to be grabbed
 
-    public Image reticle;
+    public Image handGrab; // reticle
+    public Image handOpen;
     public Transform holdPoint; //player's hand location
     public Transform camTrans;
 
@@ -34,6 +35,12 @@ public class GrabCode : MonoBehaviour
     {
         ignorePlayerLayer = LayerMask.NameToLayer("ignorePlayer"); //grab the ignoreplayer layer\
         _audioSource= GetComponent<AudioSource>();
+
+        GameObject as1 = GameObject.FindGameObjectWithTag("pickupObjectSound");
+        audioSrc1 = as1.GetComponent<AudioSource>();
+
+        handOpen.enabled = false;
+        handGrab.enabled = false;
     }
     public void Update()
     {
@@ -49,9 +56,6 @@ public class GrabCode : MonoBehaviour
             {
                 CheckForPickup(); //function below
 
-                GameObject as1 = GameObject.FindGameObjectWithTag("pickupObjectSound");
-                audioSrc1 = as1.GetComponent<AudioSource>();
-                audioSrc1.PlayOneShot(pickSound);
                 //pickSound.time = 0.2f;
             }
             else
@@ -60,16 +64,6 @@ public class GrabCode : MonoBehaviour
                 
             }
 
-            //triggering drawer open animation
-            //if(gameObject.GetComponent("Drawer") && heldObject == null)
-           // {
-            //    RaycastHit hit;
-            //    if (Physics.Raycast(camTrans.position, camTrans.forward, out hit, raycastDist, grabbableLayers))
-            //    {
-
-             ///       animator.SetTrigger("DoorOpen");
-             //   }
-          //  }
         }
     }
 
@@ -86,11 +80,12 @@ public class GrabCode : MonoBehaviour
 
     IEnumerator PickUpObject(Transform _transform)
     {
+        audioSrc1.PlayOneShot(pickSound);
         heldObject = _transform;
         originalLayer = heldObject.gameObject.layer; //save the original layer
         heldObject.gameObject.layer = ignorePlayerLayer;
 
-
+        handGrab.enabled = true;
 
         heldRigidbody = heldObject.GetComponent<Rigidbody>();
         heldRigidbody.isKinematic = true; //ignore gravity after picked up
@@ -110,8 +105,6 @@ public class GrabCode : MonoBehaviour
     {
         heldObject.position = holdPoint.position;
         heldObject.parent = holdPoint;
-
-        
     }
 
     void LaunchObject()
@@ -123,7 +116,7 @@ public class GrabCode : MonoBehaviour
         //heldRigidbody.useGravity = true;
         heldObject.position = camTrans.position;
         heldRigidbody.AddForce(camTrans.forward * launchForce, ForceMode.VelocityChange); //throw the obejct in the direction the cam
-
+        handGrab.enabled = false;
         heldObject.parent = null;
         StartCoroutine(LetGo());
     }
@@ -143,7 +136,7 @@ public class GrabCode : MonoBehaviour
         {
             if (!reticleTarget)
             {
-                reticle.color = Color.red;
+                handOpen.enabled = true;
                 reticleTarget = true;
                 
             }
@@ -151,24 +144,9 @@ public class GrabCode : MonoBehaviour
         }
         else if (reticleTarget)
         {
-            reticle.color = Color.white;
+            handOpen.enabled = false;
             reticleTarget = false;
         }
     }
-
-
-
-
-
-
-
-    //private void OnTriggerEnter(Collider other) {
-    //    if(other.gameObject.CompareTag("Player"))
-    //    {
-    //        GlobalVariables.hasKey = true;
-    //        Destroy(gameObject);
-    //    }
-
-
 }
 
