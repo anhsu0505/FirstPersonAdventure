@@ -26,12 +26,12 @@ public class DoorManager : MonoBehaviour
 
 
     void OnTriggerEnter(Collider other) {
-       //if(other.gameObject.CompareTag("Player") && GlobalVariables.hasKey == true)
+       //if(other.gameObject.CompareTag("Player"))
             if (other.tag == "Player" && GlobalVariables.hasKey == true)
             {
-            //_audiosource.PlayOneShot(doorUnlocked);
             GameObject as1 = GameObject.FindGameObjectWithTag("doorUnLockedSound");
             audioSrc1 = as1.GetComponent<AudioSource>();
+            audioSrc1.volume = 0.5f;
             audioSrc1.PlayOneShot(doorUnlocked);
 
 
